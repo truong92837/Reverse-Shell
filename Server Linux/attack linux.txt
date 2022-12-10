@@ -1,0 +1,5 @@
+apt update
+apt upgrade
+apt install nc   ###or ncat, netcat
+
+nc -lnvp 1234 -s 192.168.1.21
